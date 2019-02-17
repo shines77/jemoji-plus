@@ -3,7 +3,7 @@
 [![Gem Version](https://badge.fury.io/rb/jemoji.svg)](http://badge.fury.io/rb/jemoji)
 [![Build Status](https://travis-ci.org/jekyll/jemoji.svg?branch=master)](https://travis-ci.org/jekyll/jemoji)
 
-**[[English ReadMe](https://github.com/shines77/jemoji-plus/blob/master/README.md)] | [[Change Log](https://github.com/shines77/jemoji-plus/blob/master/CHANGELOG.md)]**
+**[[English ReadMe](https://github.com/shines77/jemoji-plus/blob/master/README.md)] | [[Change Log](https://github.com/shines77/jemoji-plus/blob/master/ChangeLog.md)]**
 
 这是一个用于 `Jekyll` 的高度定制的 `emoji` 插件。
 
