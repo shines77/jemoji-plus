@@ -1,5 +1,5 @@
 ---
 layout: without_body_attributes
-title: Plain jekyll-emoji
+title: Plain jemoji-plus
 ---
 :+1:

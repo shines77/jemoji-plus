@@ -1,5 +1,5 @@
 ---
 layout: default_minified
-title: jekyll-emoji Minified
+title: jemoji-plus Minified
 ---
 :+1:

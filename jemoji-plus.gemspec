@@ -2,18 +2,18 @@
 
 lib = File.expand_path("lib", __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "jekyll-emoji/version"
+require "jemoji-plus/version"
 
 Gem::Specification.new do |s|
-  s.name        = "jekyll-emoji"
+  s.name        = "jemoji-plus"
   s.summary     = "Highly customized version emoji plugin for Jekyll"
-  s.version     = Jekyll::Jekyll_Emoji::VERSION
+  s.version     = Jekyll::JEmoji_Plus::VERSION
   s.authors     = ["shines77 and GitHub, Inc."]
   s.email       = "gz_shines@msn.com"
 
-  s.homepage = "https://github.com/shines77/jekyll-emoji"
+  s.homepage = "https://github.com/shines77/jemoji-plus"
   s.licenses = ["MIT"]
-  s.files    = ["lib/jekyll-emoji.rb"]
+  s.files    = ["lib/jemoji-plus.rb"]
 
   s.required_ruby_version = ">= 2.3.0"
 

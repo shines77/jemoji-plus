@@ -28,13 +28,13 @@ RSpec.describe(Jekyll::Emoji) do
   let(:complex_post) { find_by_title(posts, "Code Block") }
 
   let(:pages) { site.pages }
-  let(:index) { site.pages.find { |page| page["title"] == "jekyll-emoji" } }
-  let(:minified) { site.pages.find { |page| page["title"] == "jekyll-emoji Minified" } }
+  let(:index) { site.pages.find { |page| page["title"] == "jemoji-plus" } }
+  let(:minified) { site.pages.find { |page| page["title"] == "jemoji-plus Minified" } }
 
   # plain_* denote pages that generate markup containing body tags without any attribute.
   # For example, <body>Hello World!</body>
-  let(:plain_index) { site.pages.find { |page| page["title"] == "Plain jekyll-emoji" } }
-  let(:plain_minified) { site.pages.find { |page| page["title"] == "Plain jekyll-emoji Minified" } }
+  let(:plain_index) { site.pages.find { |page| page["title"] == "Plain jemoji-plus" } }
+  let(:plain_minified) { site.pages.find { |page| page["title"] == "Plain jemoji-plus Minified" } }
 
   let(:basic_doc) { find_by_title(site.collections["docs"].docs, "File") }
   let(:doc_with_liquid) { find_by_title(site.collections["docs"].docs, "With Liquid") }
@@ -102,11 +102,11 @@ RSpec.describe(Jekyll::Emoji) do
     expect(plain_minified.output).to eql(fixture("minified_index_without_body_attributes.html"))
   end
 
-  context "with a different base for jekyll-emoji" do
+  context "with a different base for jemoji-plus" do
     let(:emoji_host) { "http://mine.club/" }
     let(:config_overrides) do
       {
-        "jekyll-emoji" => { "host" => emoji_host },
+        "jemoji-plus" => { "host" => emoji_host },
       }
     end
 

@@ -1,5 +1,5 @@
 
-[jekyll-emoji update history]
+[jemoji-plus update history]
 
 ## v0.1.0 / 2019-02-18
 

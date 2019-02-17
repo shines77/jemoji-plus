@@ -51,8 +51,8 @@ module Jekyll
       # URL for assets provided by an ASSET_HOST environment variable,
       # otherwise the root URL for emoji assets at assets-cdn.github.com.
       def emoji_src(config = {})
-        if config.key?("jekyll-emoji") && config["jekyll-emoji"].key?("host")
-          && config["jekyll-emoji"].key?("path")
+        if config.key?("jemoji-plus") && config["jemoji-plus"].key?("host")
+          && config["jemoji-plus"].key?("path")
           config_asset_root
         else
           default_asset_root
@@ -73,8 +73,8 @@ module Jekyll
 
       def config_asset_root
         # Ensure that any trailing "/" is trimmed.
-        asset_host_url = config["jekyll-emoji"]["host"].chomp("/")
-        asset_path = config["jekyll-emoji"]["path"]
+        asset_host_url = config["jemoji-plus"]["host"].chomp("/")
+        asset_path = config["jemoji-plus"]["path"]
         # If asset_path is not empty, ensure it is start with "/" character.
         if !asset_path.empty?
           # '/' ascii code is 47

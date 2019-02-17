@@ -1,5 +1,5 @@
 ---
 layout: default
-title: jekyll-emoji
+title: jemoji-plus
 ---
 :+1:

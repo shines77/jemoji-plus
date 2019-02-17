@@ -11,11 +11,11 @@
 # ExcludedMethods: refine
 Metrics/BlockLength:
   Exclude:
-    - 'spec/jekyll-emoji_spec.rb'
+    - 'spec/jemoji-plus_spec.rb'
 
 # Offense count: 1
 # Configuration parameters: Max, AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
 # URISchemes: http, https
 Metrics/LineLength:
   Exclude:
-    - 'spec/jekyll-emoji_spec.rb'
+    - 'spec/jemoji-plus_spec.rb'

@@ -1,9 +1,9 @@
-# jekyll-emoji
+# jekyll-plus
 
 [![Gem Version](https://badge.fury.io/rb/jemoji.svg)](http://badge.fury.io/rb/jemoji)
 [![Build Status](https://travis-ci.org/jekyll/jemoji.svg?branch=master)](https://travis-ci.org/jekyll/jemoji)
 
-**[中文说明](https://github.com/shines77/jekyll-emoji/blob/master/README-zhCN.md) | [Change Log](https://github.com/shines77/jekyll-emoji/blob/master/CHANGELOG.md)**
+**[中文说明](https://github.com/shines77/jemoji-plus/blob/master/README-zhCN.md) | [Change Log](https://github.com/shines77/jemoji-plus/blob/master/CHANGELOG.md)**
 
 Highly customized version emoji plugin for Jekyll.
 
@@ -14,21 +14,21 @@ This Jekyll plugin is fork base `jemoji v0.10.2` ([https://github.com/github/jem
 Add the following to your site's `Gemfile`
 
 ```
-gem 'jekyll-emoji'
+gem 'jemoji-plus'
 ```
 
 And add the following to your site's `_config.yml`
 
 ```yml
 plugins:
-  - jekyll-emoji
+  - jemoji-plus
 ```
 
 💡 If you are using a Jekyll version less than `3.5.0`, use the `gems` key instead of `plugins`, like this:
 
 ```yml
 gems:
-  - jekyll-emoji
+  - jemoji-plus
 ```
 
 In any page or post, use emoji as you would normally, e.g.
@@ -52,36 +52,40 @@ On GitHub Enterprise installs, page builds receive the `ASSET_HOST_URL` environm
 If you'd like to serve emoji images locally, or use a custom emoji source, you can specify so in your `_config.yml` file:
 
 ```yml
-jekyll-emoji:
-  host: 'https://github.githubassets.com'   # The emoji's image host url, the trailing can't end with '/', but it's can be setting to '' (empty string).
-  path: '/images/icons'                     # The emoji's image path of above host url, must start with '/' character, but it's can be setting to '' (empty string).
+jekyll-plus:
+  # The emoji's image host url, 'https://github.githubassets.com' (default).
+  # The trailing can't end with '/', and it's can be setting to '' (empty string).
+  host: 'https://github.githubassets.com'
+  # The emoji's image path of above host url, '/images/icons' (default).
+  # If it isn't empty, must start with '/' character, it's can be setting to '' (empty string).
+  path: '/images/icons'
 
   image:
-    class: 'emoji'    # The emoji's css class name.
-    format: 'png'     # The emoji's image filename format.
-    width: 20         # The emoji's image width.
-    height: 20        # The emoji's image height.
+    class: 'emoji'    # The emoji's css class name. 'emoji' (default)
+    ext-name: 'png'   # The emoji's image file extension. 'png' (default), 'jpg', 'jpeg', 'svg'
+    width: 20         # The emoji's image width. 20 (default)
+    height: 20        # The emoji's image height. 20 (default)
 
   format:
     #
-    # [image-baseurl]: The emoji's image base URL, value = '[jekyll-emoji.host][jekyll-emoji.path]'
-    # [image-filename]: The emoji's image filename, like: '1f371'
-    # [image-format]: The emoji's image filename format, like: 'png'
+    # [image-baseurl]: The emoji's image base URL, value = '[jemoji-plus.host][jemoji-plus.path]'
+    # [image-filename]: The emoji's image file name, like: '1f371'
+    # [image-extname]: The emoji's image file extension, like: 'png'
     #
     # Example:
     #
     #   https://github.githubassets.com/images/icons/emoji/unicode/1f371.png?v8
     #
-    image-src: '[image-baseurl]/emoji/unicode/[image-filename].[image-format]?v8'
+    image-src: '[image-baseurl]/emoji/unicode/[image-filename].[image-extname]?v8'
 
     #
-    # [emoji-class]: The emoji's css class name, value = [jekyll-emoji.image.class]
+    # [emoji-class]: The emoji's css class name, value = [jemoji-plus.image.class]
     # [emoji-name]: The emoji's alias name.
-    # [emoji-image-src]: The emoji's image source url, value = [jekyll-emoji.format.image-src]
+    # [emoji-image-src]: The emoji's image source url, value = [jemoji-plus.format.image-src]
     #
     # Example:
     #
-    #   <img class="github-emoji" title="bento" alt="bento" src="https://github.githubassets.com/images/icons/emoji/unicode/1f371.png?v8" height="20" width="20" />
+    #   <img class="github-emoji" title="bento" alt="bento" src="https://github.githubassets.com/images/icons/emoji/unicode/1f371.png?v8" width="20" height="20" />
     #
     emoji-html: '<img class="[emoji-class]" title="[emoji-name]" alt="[emoji-name]" src="[emoji-image-src]" width="[emoji-width]" height="[emoji-height] />'
 ```
