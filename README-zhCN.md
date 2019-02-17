@@ -1,51 +1,51 @@
 # jekyll-emoji
 
-Highly customized version emoji plugin for Jekyll.
+这是一个用于 `Jekyll` 的高度定制的 `emoji` 插件。
 
 [![Gem Version](https://badge.fury.io/rb/jemoji.svg)](http://badge.fury.io/rb/jemoji)
 [![Build Status](https://travis-ci.org/jekyll/jemoji.svg?branch=master)](https://travis-ci.org/jekyll/jemoji)
 
-## Usage
+## 用法
 
-Add the following to your site's `Gemfile`
+在你的 `Jekyll` 网站的 `Gemfile` 文件中添加如下内容：
 
 ```
 gem 'jekyll-emoji'
 ```
 
-And add the following to your site's `_config.yml`
+在你的 `Jekyll` 网站的 `_config.yml` 文件中添加如下内容：
 
 ```yml
 plugins:
   - jekyll-emoji
 ```
 
-💡 If you are using a Jekyll version less than `3.5.0`, use the `gems` key instead of `plugins`, like this:
+💡 如果你的 `Jekyll` 版本低于 `3.5.0`, 则用 `gems` 代替 `plugins`, 像这样：
 
 ```yml
 gems:
   - jekyll-emoji
 ```
 
-In any page or post, use emoji as you would normally, e.g.
+在任何页面或帖子中，像平常一样使用表情符号，例如：
 
 ```markdown
 I give this plugin two :+1:!
 ```
 
-Effect preview:
+效果预览:
 
 `I give this plugin two :+1:!`
 
-## Emoji images
+## Emoji 图片
 
 For GitHub Pages sites built on GitHub.com, emoji images are served from the GitHub.com CDN, with a base URL of `https://github.githubassets.com`, which results in emoji image URLs like `https://github.githubassets.com/images/icons/emoji/unicode/1f604.png`.
 
 On GitHub Enterprise installs, page builds receive the `ASSET_HOST_URL` environment variable, which contain a value like `https://assets.ghe.my-company.com`. This results in emoji images for GitHub Pages sites built on a GitHub Enterprise install being served at URLs like `https://assets.ghe.my-company.com/images/icons/emoji/unicode/1f604.png`.
 
-## Customizing
+## 定制化
 
-If you'd like to serve emoji images locally, or use a custom emoji source, you can specify so in your `_config.yml` file:
+如果您想在本地提供 `emoji` 符号图像，或使用自定义 `emoji` 符号源，您可以在 `_config.yml` 文件中指定：
 
 ```yml
 jekyll-emoji:

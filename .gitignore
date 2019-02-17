@@ -1,3 +1,4 @@
+## Default ignore setting for Ruby
 *.gem
 *.rbc
 /.config
@@ -9,6 +10,15 @@
 /test/tmp/
 /test/version_tmp/
 /tmp/
+
+## [jemoji] default ignore setting for Ruby
+bin
+.bundle
+/*.gem
+Gemfile.lock
+/pkg
+_site
+/vendor/gems
 
 # Used by dotenv library to load environment variables.
 # .env
