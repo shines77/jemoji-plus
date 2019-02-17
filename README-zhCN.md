@@ -1,9 +1,13 @@
 # jekyll-emoji
 
-这是一个用于 `Jekyll` 的高度定制的 `emoji` 插件。
-
 [![Gem Version](https://badge.fury.io/rb/jemoji.svg)](http://badge.fury.io/rb/jemoji)
 [![Build Status](https://travis-ci.org/jekyll/jemoji.svg?branch=master)](https://travis-ci.org/jekyll/jemoji)
+
+**[English ReadMe](https://github.com/shines77/jekyll-emoji/blob/master/README.md) | [Change Log](https://github.com/shines77/jekyll-emoji/blob/master/CHANGELOG.md)**
+
+这是一个用于 `Jekyll` 的高度定制的 `emoji` 插件。
+
+这个 `Jekyll` 插件是基于 `jemoji v0.10.2` ([https://github.com/github/jemoji](https://github.com/github/jemoji)) 修改的。
 
 ## 用法
 

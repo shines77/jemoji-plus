@@ -1,9 +1,13 @@
 # jekyll-emoji
 
-Highly customized version emoji plugin for Jekyll.
-
 [![Gem Version](https://badge.fury.io/rb/jemoji.svg)](http://badge.fury.io/rb/jemoji)
 [![Build Status](https://travis-ci.org/jekyll/jemoji.svg?branch=master)](https://travis-ci.org/jekyll/jemoji)
+
+**[中文说明](https://github.com/shines77/jekyll-emoji/blob/master/README-zhCN.md) | [Change Log](https://github.com/shines77/jekyll-emoji/blob/master/CHANGELOG.md)**
+
+Highly customized version emoji plugin for Jekyll.
+
+This Jekyll plugin is fork base `jemoji v0.10.2` ([https://github.com/github/jemoji](https://github.com/github/jemoji)).
 
 ## Usage
 
