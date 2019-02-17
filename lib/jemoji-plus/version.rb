@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Jekyll
-  module Jekyll_Emoji
+  module JEmoji_Plus
     VERSION = "0.1.0"
   end
 end
