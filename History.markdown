@@ -1,3 +1,13 @@
+
+[jekyll-emoji update history]
+
+## v0.1.0 / 2019-02-18
+
+  * First commit
+  * Added some new config options
+
+[jemoji update history]
+
 ## v0.10.2 / 2019-02-13
 
 ### Bug Fixes

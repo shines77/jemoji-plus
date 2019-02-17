@@ -86,9 +86,9 @@ module Jekyll
       end
 
       def default_asset_root
-        if !ENV["GITHUB_DOT_COM_ASSET_HOST_URL"].to_s.empty?
+        if !ENV["ASSET_HOST_URL"].to_s.empty?
           # Ensure that any trailing "/" is trimmed
-          asset_host_url = ENV["GITHUB_DOT_COM_ASSET_HOST_URL"].chomp("/")
+          asset_host_url = ENV["ASSET_HOST_URL"].chomp("/")
           "#{asset_host_url}#{ASSET_PATH}"
         else
           "#{ASSET_HOST}#{ASSET_PATH}"
