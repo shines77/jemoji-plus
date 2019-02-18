@@ -2,6 +2,6 @@
 
 module Jekyll
   module JEmoji_Plus
-    VERSION = "0.1.8"
+    VERSION = "0.1.9"
   end
 end
