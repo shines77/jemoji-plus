@@ -2,7 +2,7 @@
 
 lib = File.expand_path("lib", __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "jemoji-plus/version"
+require "jemoji_plus/version"
 
 Gem::Specification.new do |s|
   s.name        = "jemoji-plus"
@@ -13,12 +13,12 @@ Gem::Specification.new do |s|
 
   s.homepage = "https://github.com/shines77/jemoji-plus"
   s.licenses = ["MIT"]
-  s.files    = ["lib/jemoji-plus.rb"]
+  s.files    = ["lib/jemoji_plus.rb"]
 
   s.required_ruby_version = ">= 2.3.0"
 
   s.add_dependency "gemoji", "~> 3.0"
-  s.add_dependency "html-pipeline", "~> 2.2"
+  s.add_dependency "html-pipeline-plus", "~> 2.10.2"
   s.add_dependency "jekyll", "~> 3.0"
 
   s.add_development_dependency "bundler"

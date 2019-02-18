@@ -2,7 +2,7 @@
 
 require "jekyll"
 require "gemoji"
-require "html/pipeline"
+require "html/pipeline_plus"
 
 module Jekyll
   class Emoji

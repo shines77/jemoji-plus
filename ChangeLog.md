@@ -1,6 +1,11 @@
 
 [jemoji-plus update history]
 
+## v0.1.1 / 2019-02-18
+
+  * Change dependency html-pipeline to html-pipeline-plus
+  * Change all of path "jemoji-plus" to "jemoji_plus"
+
 ## v0.1.0 / 2019-02-18
 
   * First commit
