@@ -103,10 +103,12 @@ RSpec.describe(Jekyll::Emoji) do
   end
 
   context "with a different base for jemoji-plus" do
-    let(:emoji_host) { "http://mine.club/" }
+    let(:emoji_src) { "http://mine.club/" }
     let(:config_overrides) do
       {
-        "jemoji-plus" => { "host" => emoji_host },
+        "emoji" => { "src" => emoji_src },
+        "jemoji_plus" => { "host" => emoji_src },
+        "jemoji_plus" => { "path" => "" },
       }
     end
 
