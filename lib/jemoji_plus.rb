@@ -73,29 +73,29 @@ module Jekyll
       def config_asset_root(config)
         # Ensure that any trailing "/" is trimmed.
         asset_host_url = config["jemoji_plus"]["host"].chomp("/")
-        # Ensure [asset_path] is start with "/" character.
+        # Ensure [asset_path] is start with "/".
         asset_path = config["jemoji_plus"]["path"]
         if !asset_path.start_with?("/")
-          asset_path_sav = asset_path
-          asset_path = ""
-          asset_path << '/'.freeze << asset_path_sav
+          "#{asset_host_url}/#{asset_path}"
+        else
+          "#{asset_host_url}#{asset_path}"
         end
-        "#{asset_host_url}#{asset_path}"
       end
 
       def default_asset_root
         if !ENV["ASSET_HOST_URL"].to_s.empty?
-          # Ensure that any trailing "/" is trimmed.
-          asset_host_url = ENV["ASSET_HOST_URL"].chomp("/")
-          # Ensure the trailing is end with "/".
-          asset_path = ASSET_PATH
-          if !asset_path.start_with?("/")
-            asset_path = ""
-            asset_path << '/'.freeze << ASSET_PATH
-          end
-          "#{asset_host_url}#{asset_path}"
+          asset_host_url = ENV["ASSET_HOST_URL"]
         else
-          "#{ASSET_HOST}#{ASSET_PATH}"
+          asset_host_url = ASSET_HOST
+        end
+        # Ensure that any trailing "/" is trimmed.
+        asset_host_url = asset_host_url.chomp("/")
+        # Ensure [asset_path] is start with "/".
+        asset_path = ASSET_PATH
+        if !asset_path.start_with?("/")
+          "#{asset_host_url}/#{asset_path}"
+        else
+          "#{asset_host_url}#{asset_path}"
         end
       end
 
