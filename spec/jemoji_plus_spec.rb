@@ -19,7 +19,7 @@ RSpec.describe(Jekyll::Emoji) do
   let(:default_src) { "https://github.githubassets.com/images/icons/" }
   let(:result) do
     <<-STR.strip
-    <img class="emoji" title=":+1:" alt=":+1:" src="#{default_src}emoji/unicode/1f44d.png" width="20" height="20" />
+    <img class="emoji" title=":+1:" alt=":+1:" src="#{default_src}emoji/unicode/1f44d.png" width="20" height="20">
     STR
   end
 
