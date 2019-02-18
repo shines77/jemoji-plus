@@ -73,15 +73,12 @@ module Jekyll
       def config_asset_root(config)
         # Ensure that any trailing "/" is trimmed.
         asset_host_url = config["jemoji_plus"]["host"].chomp("/")
-        asset_path = config["jemoji_plus"]["path"]
         # Ensure [asset_path] is start with "/" character.
-        if !asset_path.empty?
-          # '/' ascii code is 47
-          if asset_path[0] != 47
-            asset_path << '/' << asset_path
-          end
-        else
-          asset_path = '/'
+        asset_path = config["jemoji_plus"]["path"]
+        if !asset_path.start_with?("/")
+          asset_path_sav = asset_path
+          asset_path = ""
+          asset_path << '/'.freeze << asset_path_sav
         end
         "#{asset_host_url}#{asset_path}"
       end
@@ -92,13 +89,9 @@ module Jekyll
           asset_host_url = ENV["ASSET_HOST_URL"].chomp("/")
           # Ensure the trailing is end with "/".
           asset_path = ASSET_PATH
-          if !asset_path.empty?
-            # '/' ascii code is 47
-            if asset_path[0] != 47
-              asset_path << '/' << asset_path
-            end
-          else
-            asset_path = '/'
+          if !asset_path.start_with?("/")
+            asset_path = ""
+            asset_path << '/'.freeze << ASSET_PATH
           end
           "#{asset_host_url}#{asset_path}"
         else
