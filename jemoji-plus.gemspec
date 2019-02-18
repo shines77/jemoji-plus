@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.required_ruby_version = ">= 2.3.0"
 
   s.add_dependency "gemoji", "~> 3.0"
-  s.add_dependency "html-pipeline-plus", "~> 2.10.5"
+  s.add_dependency "html-pipeline-plus", "~> 2.10.6"
   s.add_dependency "jekyll", "~> 3.0"
 
   s.add_development_dependency "bundler"

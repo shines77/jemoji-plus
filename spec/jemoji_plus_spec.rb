@@ -107,8 +107,7 @@ RSpec.describe(Jekyll::Emoji) do
     let(:config_overrides) do
       {
         "emoji" => { "src" => emoji_src },
-        "jemoji_plus" => { "host" => emoji_src },
-        "jemoji_plus" => { "path" => "" },
+        "jemoji_plus" => { "host" => emoji_src, "path" => "" }
       }
     end
 
