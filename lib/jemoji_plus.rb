@@ -5,8 +5,8 @@ require "gemoji"
 require "html/pipeline"
 
 module Jekyll
-  class Emoji_Plus
-    ASSET_HOST = "https://github.githubassets.com"
+  class EmojiPlus
+    ASSET_HOST_URL = "https://github.githubassets.com"
     ASSET_PATH = "/images/icons/"
     BODY_START_TAG = "<body"
     OPENING_BODY_TAG_REGEX = %r!<body(.*?)>\s*!.freeze
@@ -48,10 +48,10 @@ module Jekyll
       # config - the hash-like configuration of the document's site
       #
       # Returns a full URL to use as the asset root URL. Defaults to the root
-      # URL for assets provided by an ASSET_HOST environment variable,
+      # URL for assets provided by an ASSET_HOST_URL environment variable,
       # otherwise the root URL for emoji assets at assets-cdn.github.com.
       def emoji_src(config = {})
-        if config.key?("emoji-plus") && config["emoji-plus"].key?("host") && config["emoji-plus"].key?("path")
+        if config.key?("emoji_plus") && config["emoji_plus"].key?("host") && config["emoji_plus"].key?("path")
           config_asset_root(config)
         else
           default_asset_root
@@ -72,13 +72,13 @@ module Jekyll
 
       def config_asset_root(config)
         # Ensure that any trailing "/" is trimmed.
-        asset_host_url = config["emoji-plus"]["host"].chomp("/")
+        asset_host_url = config["emoji_plus"]["host"].chomp("/")
         # Ensure [asset_path] is start with "/".
-        asset_path = config["emoji-plus"]["path"]
-        if !asset_path.start_with?("/")
-          "#{asset_host_url}/#{asset_path}"
-        else
+        asset_path = config["emoji_plus"]["path"]
+        if asset_path.start_with?("/")
           "#{asset_host_url}#{asset_path}"
+        else
+          "#{asset_host_url}\/#{asset_path}"
         end
       end
 
@@ -86,16 +86,16 @@ module Jekyll
         if !ENV["ASSET_HOST_URL"].to_s.empty?
           asset_host_url = ENV["ASSET_HOST_URL"]
         else
-          asset_host_url = ASSET_HOST
+          asset_host_url = ASSET_HOST_URL
         end
         # Ensure that any trailing "/" is trimmed.
         asset_host_url = asset_host_url.chomp("/")
         # Ensure [asset_path] is start with "/".
         asset_path = ASSET_PATH
-        if !asset_path.start_with?("/")
-          "#{asset_host_url}/#{asset_path}"
-        else
+        if asset_path.start_with?("/")
           "#{asset_host_url}#{asset_path}"
+        else
+          "#{asset_host_url}\/#{asset_path}"
         end
       end
 
@@ -111,5 +111,5 @@ module Jekyll
 end
 
 Jekyll::Hooks.register [:pages, :documents], :post_render do |doc|
-  Jekyll::Emoji_Plus.emojify(doc) if Jekyll::Emoji_Plus.emojiable?(doc)
+  Jekyll::EmojiPlus.emojify(doc) if Jekyll::EmojiPlus.emojiable?(doc)
 end

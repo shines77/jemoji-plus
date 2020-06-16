@@ -2,6 +2,10 @@
 [jemoji-plus update history]
 ----------------------------------------------------------------
 
+## v0.1.13 / 2020-06-17
+
+  * Minor modifications.
+
 ## v0.1.12 / 2020-06-16
 
   * Change to html-pipeline lib (>= 2.2)
