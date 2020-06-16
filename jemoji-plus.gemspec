@@ -7,7 +7,7 @@ require "jemoji_plus/version"
 Gem::Specification.new do |s|
   s.name        = "jemoji-plus"
   s.summary     = "Highly customized version emoji plugin for Jekyll"
-  s.version     = Jekyll::Jemoji_Plus::VERSION
+  s.version     = Jekyll::JEmoji_Plus::VERSION
   s.authors     = ["shines77 and GitHub, Inc."]
   s.email       = "gz_shines@msn.com"
 
