@@ -52,7 +52,7 @@ On GitHub Enterprise installs, page builds receive the `ASSET_HOST_URL` environm
 如果您想在本地提供 `emoji` 符号图像，或使用自定义 `emoji` 符号源，您可以在 `_config.yml` 文件中指定：
 
 ```yml
-jekyll_plus:
+emoji-plus:
   # The emoji's image host url, 'https://github.githubassets.com' (default).
   # The trailing can't end with '/', and it's can be setting to '' (empty string).
   host: 'https://github.githubassets.com'

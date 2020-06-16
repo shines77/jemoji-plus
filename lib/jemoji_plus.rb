@@ -2,10 +2,10 @@
 
 require "jekyll"
 require "gemoji"
-require "html/pipeline_plus"
+require "html/pipeline"
 
 module Jekyll
-  class Emoji
+  class Emoji_Plus
     ASSET_HOST = "https://github.githubassets.com"
     ASSET_PATH = "/images/icons/"
     BODY_START_TAG = "<body"
@@ -51,7 +51,7 @@ module Jekyll
       # URL for assets provided by an ASSET_HOST environment variable,
       # otherwise the root URL for emoji assets at assets-cdn.github.com.
       def emoji_src(config = {})
-        if config.key?("jemoji_plus") && config["jemoji_plus"].key?("host") && config["jemoji_plus"].key?("path")
+        if config.key?("emoji-plus") && config["emoji-plus"].key?("host") && config["emoji-plus"].key?("path")
           config_asset_root(config)
         else
           default_asset_root
@@ -72,9 +72,9 @@ module Jekyll
 
       def config_asset_root(config)
         # Ensure that any trailing "/" is trimmed.
-        asset_host_url = config["jemoji_plus"]["host"].chomp("/")
+        asset_host_url = config["emoji-plus"]["host"].chomp("/")
         # Ensure [asset_path] is start with "/".
-        asset_path = config["jemoji_plus"]["path"]
+        asset_path = config["emoji-plus"]["path"]
         if !asset_path.start_with?("/")
           "#{asset_host_url}/#{asset_path}"
         else
@@ -111,5 +111,5 @@ module Jekyll
 end
 
 Jekyll::Hooks.register [:pages, :documents], :post_render do |doc|
-  Jekyll::Emoji.emojify(doc) if Jekyll::Emoji.emojiable?(doc)
+  Jekyll::Emoji_Plus.emojify(doc) if Jekyll::Emoji_Plus.emojiable?(doc)
 end

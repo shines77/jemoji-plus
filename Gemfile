@@ -6,7 +6,7 @@ source "https://rubygems.org"
 gemspec
 
 # gem 'gemoji', '~> 3.0'
-# gem 'html-pipeline-plus', '~> 2.10.2'
+# gem 'html-pipeline-plus', '~> 2.10.7'
 # gem 'jekyll', '~> 3.0'
 
 # group :development do

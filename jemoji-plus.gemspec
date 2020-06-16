@@ -7,7 +7,7 @@ require "jemoji_plus/version"
 Gem::Specification.new do |s|
   s.name        = "jemoji-plus"
   s.summary     = "Highly customized version emoji plugin for Jekyll"
-  s.version     = Jekyll::JEmoji_Plus::VERSION
+  s.version     = Jekyll::Jemoji_Plus::VERSION
   s.authors     = ["shines77 and GitHub, Inc."]
   s.email       = "gz_shines@msn.com"
 
@@ -18,7 +18,8 @@ Gem::Specification.new do |s|
   s.required_ruby_version = ">= 2.3.0"
 
   s.add_dependency "gemoji", "~> 3.0"
-  s.add_dependency "html-pipeline-plus", "~> 2.10.7"
+  s.add_dependency "html-pipeline", "~> 2.2"
+  # s.add_dependency "html-pipeline-plus", "~> 2.10.7"
   s.add_dependency "jekyll", "~> 3.0"
 
   s.add_development_dependency "bundler"
