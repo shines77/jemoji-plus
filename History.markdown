@@ -2,6 +2,10 @@
 [jemoji-plus update history]
 ----------------------------------------------------------------
 
+## v0.1.14 / 2020-06-17
+
+  * Fixed a Spelling mistake
+
 ## v0.1.13 / 2020-06-17
 
   * Minor modifications.
