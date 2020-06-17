@@ -2,7 +2,7 @@
 
 require "spec_helper"
 
-RSpec.describe(Jekyll::Emoji_Plus) do
+RSpec.describe(Jekyll::EmojiPlus) do
   Jekyll.logger.log_level = :error
 
   let(:config_overrides) { {} }
